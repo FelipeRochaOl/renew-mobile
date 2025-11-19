@@ -17,7 +17,6 @@ export default function ChatbotScreen() {
     const content = text.trim();
     if (!content) return;
     setText('');
-    await clearHistory();
     await sendMessage(content);
     requestAnimationFrame(() => listRef.current?.scrollToEnd({ animated: true }));
   }
